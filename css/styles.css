@@ -1,0 +1,29 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins'; color: #000; }
+.fg-animation-pagewrap { max-width: 1920px; margin: 0 auto; overflow: hidden; height: 300vh; }
+.fg-animation-pagewrap img { max-width: 100%; }
+
+@keyframes phone-title {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+#progress { animation: grow-progress linear forwards; animation-timeline: scroll(); }
+
+.fg-top-header { padding: 15px; display: flex; justify-content: flex-start; align-items: flex-start; }
+
+.fg-phone-mainwrap { overflow: hidden;  }
+.fg-phone-innerwrap { position: relative; display: flex; }
+.fg-phone-container { position: absolute; top: 0; left: 9%; right: 45%; }
+.fg-phone-title { position: absolute; top: 22%; left: 58%; /* animation: phone-title linear forwards; animation-timeline: scroll(block root); transform-origin: 0 50%; transform: scaleY(0); */ }
+.fg-phone-title h1 { font-weight: 700; font-size: 60px; line-height: 68px; }
+.fg-phone-title p { font-weight: 500; font-size: 36px; line-height: 68px; }
+.fg-msgs-wrap { position: absolute; top: 18.5%; left: 26%; right: 24.5%; }
+.fg-msg-card { display: flex; margin: 3px 0 0; transition: 0.5s ease-in-out; }
+
+@media (max-width:1920px) {
+    .fg-phone-title h1 { font-size: 4.35vw; }
+    .fg-phone-title p { font-size: 2.5vw; }
+}
